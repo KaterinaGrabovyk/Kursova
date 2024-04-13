@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KursovaConsole", "KursovaConsole\KursovaConsole.csproj", "{4910F24D-2F60-417F-A1D3-5A58A2E4FFAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KursovaWinForms", "KursovaWinForms\KursovaWinForms.csproj", "{0E659FCE-C8AF-4FC1-B7E9-526D6D9AB796}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4910F24D-2F60-417F-A1D3-5A58A2E4FFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4910F24D-2F60-417F-A1D3-5A58A2E4FFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4910F24D-2F60-417F-A1D3-5A58A2E4FFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4910F24D-2F60-417F-A1D3-5A58A2E4FFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E659FCE-C8AF-4FC1-B7E9-526D6D9AB796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E659FCE-C8AF-4FC1-B7E9-526D6D9AB796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E659FCE-C8AF-4FC1-B7E9-526D6D9AB796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E659FCE-C8AF-4FC1-B7E9-526D6D9AB796}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {092462FE-6CFB-4171-9A76-44E8B92413DC}
+	EndGlobalSection
+EndGlobal
