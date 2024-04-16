@@ -36,6 +36,13 @@
             button1 = new Button();
             tabPage2 = new TabPage();
             groupBox4 = new GroupBox();
+            numericUpDown8 = new NumericUpDown();
+            label14 = new Label();
+            numericUpDown7 = new NumericUpDown();
+            label12 = new Label();
+            radioButton7 = new RadioButton();
+            radioButton8 = new RadioButton();
+            label13 = new Label();
             groupBox3 = new GroupBox();
             numericUpDown6 = new NumericUpDown();
             label10 = new Label();
@@ -68,17 +75,12 @@
             button6 = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
-            numericUpDown7 = new NumericUpDown();
-            label12 = new Label();
-            radioButton7 = new RadioButton();
-            label13 = new Label();
-            radioButton8 = new RadioButton();
-            label14 = new Label();
-            numericUpDown8 = new NumericUpDown();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown7).BeginInit();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
             groupBox2.SuspendLayout();
@@ -88,8 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown8).BeginInit();
             SuspendLayout();
             // 
             // listView1
@@ -146,9 +146,9 @@
             // 
             button1.Location = new Point(6, 628);
             button1.Name = "button1";
-            button1.Size = new Size(182, 51);
+            button1.Size = new Size(932, 51);
             button1.TabIndex = 5;
-            button1.Text = "Завантажити";
+            button1.Text = "Завантажити / Оновити";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -181,6 +181,74 @@
             groupBox4.TabIndex = 36;
             groupBox4.TabStop = false;
             groupBox4.Text = "Редагування ";
+            // 
+            // numericUpDown8
+            // 
+            numericUpDown8.DecimalPlaces = 2;
+            numericUpDown8.Location = new Point(178, 197);
+            numericUpDown8.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            numericUpDown8.Minimum = new decimal(new int[] { 10, 0, 0, 65536 });
+            numericUpDown8.Name = "numericUpDown8";
+            numericUpDown8.Size = new Size(141, 35);
+            numericUpDown8.TabIndex = 17;
+            numericUpDown8.Value = new decimal(new int[] { 10, 0, 0, 65536 });
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(27, 199);
+            label14.Name = "label14";
+            label14.Size = new Size(139, 28);
+            label14.TabIndex = 16;
+            label14.Text = "Нова ціна:";
+            // 
+            // numericUpDown7
+            // 
+            numericUpDown7.Location = new Point(190, 130);
+            numericUpDown7.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            numericUpDown7.Name = "numericUpDown7";
+            numericUpDown7.Size = new Size(168, 35);
+            numericUpDown7.TabIndex = 15;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(71, 31);
+            label12.Name = "label12";
+            label12.Size = new Size(248, 28);
+            label12.TabIndex = 14;
+            label12.Text = "Оберіть тип техніки";
+            // 
+            // radioButton7
+            // 
+            radioButton7.AutoSize = true;
+            radioButton7.Location = new Point(212, 78);
+            radioButton7.Name = "radioButton7";
+            radioButton7.Size = new Size(146, 32);
+            radioButton7.TabIndex = 13;
+            radioButton7.TabStop = true;
+            radioButton7.Text = "Ноутбуки";
+            radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            radioButton8.AutoSize = true;
+            radioButton8.Location = new Point(38, 78);
+            radioButton8.Name = "radioButton8";
+            radioButton8.Size = new Size(66, 32);
+            radioButton8.TabIndex = 12;
+            radioButton8.TabStop = true;
+            radioButton8.Text = "ПК";
+            radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(27, 137);
+            label13.Name = "label13";
+            label13.Size = new Size(146, 28);
+            label13.TabIndex = 11;
+            label13.Text = "Введіть ID:";
             // 
             // groupBox3
             // 
@@ -387,9 +455,9 @@
             groupBox1.Controls.Add(radioButton4);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(radioButton3);
-            groupBox1.Location = new Point(528, 41);
+            groupBox1.Location = new Point(362, 33);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(369, 264);
+            groupBox1.Size = new Size(559, 264);
             groupBox1.TabIndex = 29;
             groupBox1.TabStop = false;
             groupBox1.Text = "Тип техніки";
@@ -410,17 +478,17 @@
             // 
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "Fractal Design Meshify C", "NZXT H510", "Corsair 4000D Airflow", "Phanteks Eclipse P400A", "Cooler Master MasterBox TD500 Mesh", "Lian Li Lancool II Mesh", "Thermaltake View 51 ARGB", "Be Quiet! Pure Base 500DX", "Antec P120 Crystal", "InWin 303" });
-            comboBox4.Location = new Point(171, 118);
+            comboBox4.Location = new Point(109, 118);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(192, 36);
+            comboBox4.Size = new Size(444, 36);
             comboBox4.TabIndex = 19;
             comboBox4.Visible = false;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(171, 191);
+            textBox2.Location = new Point(112, 191);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(192, 35);
+            textBox2.Size = new Size(270, 35);
             textBox2.TabIndex = 18;
             textBox2.Visible = false;
             // 
@@ -448,7 +516,7 @@
             // radioButton4
             // 
             radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(191, 43);
+            radioButton4.Location = new Point(308, 43);
             radioButton4.Name = "radioButton4";
             radioButton4.Size = new Size(131, 32);
             radioButton4.TabIndex = 14;
@@ -531,74 +599,6 @@
             radioButton2.Text = "Ні";
             radioButton2.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown7
-            // 
-            numericUpDown7.Location = new Point(190, 130);
-            numericUpDown7.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            numericUpDown7.Name = "numericUpDown7";
-            numericUpDown7.Size = new Size(168, 35);
-            numericUpDown7.TabIndex = 15;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(71, 31);
-            label12.Name = "label12";
-            label12.Size = new Size(248, 28);
-            label12.TabIndex = 14;
-            label12.Text = "Оберіть тип техніки";
-            // 
-            // radioButton7
-            // 
-            radioButton7.AutoSize = true;
-            radioButton7.Location = new Point(212, 78);
-            radioButton7.Name = "radioButton7";
-            radioButton7.Size = new Size(146, 32);
-            radioButton7.TabIndex = 13;
-            radioButton7.TabStop = true;
-            radioButton7.Text = "Ноутбуки";
-            radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(27, 137);
-            label13.Name = "label13";
-            label13.Size = new Size(146, 28);
-            label13.TabIndex = 11;
-            label13.Text = "Введіть ID:";
-            // 
-            // radioButton8
-            // 
-            radioButton8.AutoSize = true;
-            radioButton8.Location = new Point(38, 78);
-            radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(66, 32);
-            radioButton8.TabIndex = 12;
-            radioButton8.TabStop = true;
-            radioButton8.Text = "ПК";
-            radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(27, 199);
-            label14.Name = "label14";
-            label14.Size = new Size(139, 28);
-            label14.TabIndex = 16;
-            label14.Text = "Нова ціна:";
-            // 
-            // numericUpDown8
-            // 
-            numericUpDown8.DecimalPlaces = 2;
-            numericUpDown8.Location = new Point(178, 197);
-            numericUpDown8.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            numericUpDown8.Minimum = new decimal(new int[] { 10, 0, 0, 65536 });
-            numericUpDown8.Name = "numericUpDown8";
-            numericUpDown8.Size = new Size(141, 35);
-            numericUpDown8.TabIndex = 17;
-            numericUpDown8.Value = new decimal(new int[] { 10, 0, 0, 65536 });
-            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(14F, 28F);
@@ -614,6 +614,8 @@
             tabPage2.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown7).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
@@ -626,8 +628,6 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown8).EndInit();
             ResumeLayout(false);
         }
 

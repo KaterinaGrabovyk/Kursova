@@ -118,7 +118,7 @@ namespace KursovaWinForms
         }
         private void Clean()
         {
-            MessageBox.Show("Додано. Поля будуть очищенні.");
+            
             comboBox1.SelectedItem = null;
             numericUpDown5.Value = 11;
             comboBox3.SelectedItem = null;
@@ -136,7 +136,8 @@ namespace KursovaWinForms
             comboBox3.Visible = false;
             comboBox4.Visible = false;
             textBox2.Visible = false;
-            
+            label6.Visible = false;
+            label7.Visible = false;
         }
         //видалити
         private void button4_Click(object sender, EventArgs e)
@@ -190,6 +191,7 @@ namespace KursovaWinForms
                         dbPC.Add(new PC((string)comboBox1.SelectedItem, (int)numericUpDown1.Value,
                             (int)numericUpDown2.Value, (int)numericUpDown3.Value, (double)numericUpDown4.Value,
                             isStock, textBox2.Text, (string)comboBox4.SelectedItem)); dbPC.SaveChanges();
+                        MessageBox.Show("Додано. Поля будуть очищенні.");
                         Clean();
                     }
                 }
@@ -202,6 +204,7 @@ namespace KursovaWinForms
                         dbLT.Add(new LapTop((string)comboBox1.SelectedItem, (int)numericUpDown1.Value,
                             (int)numericUpDown2.Value, (int)numericUpDown3.Value, (double)numericUpDown4.Value,
                             isStock, (double)numericUpDown5.Value, (string)comboBox3.SelectedItem)); dbLT.SaveChanges();
+                        MessageBox.Show("Додано. Поля будуть очищенні.");
                         Clean();
                     }
                 }
