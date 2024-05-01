@@ -206,6 +206,7 @@
             numericUpDown3.Size = new Size(122, 35);
             numericUpDown3.TabIndex = 32;
             numericUpDown3.Visible = false;
+            numericUpDown3.Visible = false;
             // 
             // label3
             // 

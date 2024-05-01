@@ -45,9 +45,11 @@ namespace KursovaWinForms
             radioButton1.Checked = false;
             radioButton2.Checked = false;
             radioButton3.Checked = false;
-            radioButton4.Checked=false;
+            radioButton4.Checked = false;
             numericUpDown2.Visible = false;
             label2.Visible = false;
+            label3.Visible = false;
+            numericUpDown3.Visible = false;
             numericUpDown3.Value = 0;
             comboBox1.Visible = false;
             listBox1.Items.Clear();
@@ -56,14 +58,18 @@ namespace KursovaWinForms
         //За ціною
         private void button3_Click(object sender, EventArgs e)
         {
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
             listBox1.Items.Clear();
             foreach (var item in dbPC.PCs.Local.ToList())
             { listBox1.Items.Add($"Ціна:[{item.Price}]грн,Виробник:{item.Virobnuk};Об'єм RAM:{item.RAM};Об'єм жорского диску:{item.HD};Кількість ядер:{item.YadraCount},Корпус:{item.Korpus},Модель:{item.Model}."); }
             listBox1.Sorted = true;
         }
-        //За об'ємом
+        //Мишка       
         private void button4_Click(object sender, EventArgs e)
         {
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
             listBox1.Sorted = false;
             listBox1.Items.Clear();
             foreach (var item in dbPC.PCs.Local.ToList())
@@ -74,7 +80,7 @@ namespace KursovaWinForms
                 }
             }
         }
-        //Мишка
+        //За об'ємом
         private void button5_Click(object sender, EventArgs e)
         {
             listBox1.Sorted = false;
@@ -104,15 +110,33 @@ namespace KursovaWinForms
         //-----------Ноутбуки---------------
         //Всі
         private void button6_Click(object sender, EventArgs e)
-        {
+        {            
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            numericUpDown2.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            numericUpDown3.Visible = false;
+            numericUpDown3.Value = 0;
+            comboBox1.Visible = false;
+            comboBox1.SelectedItem = null;
             listBox1.Items.Clear();
             foreach (var item in dbLT.LTs.Local.ToList())
             { listBox1.Items.Add($"Ціна:[{item.Price}]грн,Виробник:{item.Virobnuk};Об'єм RAM:{item.RAM};Об'єм жорского диску:{item.HD};Кількість ядер:{item.YadraCount},Діагональ:{item.Diagonal},Динаміки:{item.Dinamics}."); }
         }
 
-         //в наявності
+        //в наявності
         private void button7_Click(object sender, EventArgs e)
         {
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            numericUpDown2.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            numericUpDown3.Visible = false;
+            numericUpDown3.Value = 0;
+            comboBox1.Visible = false;
+            comboBox1.SelectedItem = null;
             listBox1.Items.Clear();
             foreach (var item in dbLT.LTs.Local.ToList())
             {
@@ -125,6 +149,7 @@ namespace KursovaWinForms
         // За промокодом/виробником
         private void button8_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             if (radioButton3.Checked == true)
             {
                 foreach (var item in dbLT.LTs.Local.ToList())
@@ -137,7 +162,7 @@ namespace KursovaWinForms
             }
             if (radioButton4.Checked == true)
             {
-                if (numericUpDown3.Value==0)
+                if (numericUpDown3.Value == 0)
                 {
                     MessageBox.Show("Не обрано позицію");
                 }
@@ -159,17 +184,20 @@ namespace KursovaWinForms
         }
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             button8.Enabled = true;
             comboBox1.Visible = true;
             numericUpDown2.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
             numericUpDown3.Visible = false;
+            foreach (var item in dbLT.LTs.Local.ToList())
+            { listBox1.Items.Add($"ID:{item.ID}; Виробник:{item.Virobnuk};Об'єм RAM:{item.RAM};Об'єм жорского диску:{item.HD};Кількість ядер:{item.YadraCount};Ціна:[{item.Price}]грн;Діагональ:{item.Diagonal};Динаміки:{item.Dinamics}."); }
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
             comboBox1.Visible = false;
             numericUpDown2.Visible = true;
             label2.Visible = true;
@@ -181,6 +209,7 @@ namespace KursovaWinForms
             { listBox1.Items.Add($"ID:{item.ID}; Виробник:{item.Virobnuk};Об'єм RAM:{item.RAM};Об'єм жорского диску:{item.HD};Кількість ядер:{item.YadraCount};Ціна:[{item.Price}]грн;Діагональ:{item.Diagonal};Динаміки:{item.Dinamics}."); }
 
         }
+
         //----------------------------------
     }
 }
