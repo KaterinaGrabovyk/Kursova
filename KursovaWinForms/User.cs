@@ -33,7 +33,7 @@ namespace KursovaWinForms
         {
             listBox1.Items.Clear();
             foreach (var item in dbPC.PCs.Local.ToList())
-            { listBox1.Items.Add($"Ціна:[{item.Price}]грн,Виробник:{item.Virobnuk};Об'єм RAM:{item.RAM};Об'єм жорского диску:{item.HD};Кількість ядер:{item.YadraCount},Корпус:{item.Korpus},Модель:{item.Model}."); }
+            { listBox1.Items.Add($"Ціна:[{item.Price}]грн,Виробник:{item.Virobnuk};Об'єм RAM:{item.RAM};Об'єм жорского диску:{item.HD};Кількість ядер:{item.YadraCount},Корпус:{item.Korpus},Модель:{item.Model}."); } 
             foreach (var item in dbLT.LTs.Local.ToList())
             { listBox1.Items.Add($"Ціна:[{item.Price}]грн,Виробник:{item.Virobnuk};Об'єм RAM:{item.RAM};Об'єм жорского диску:{item.HD};Кількість ядер:{item.YadraCount},Діагональ:{item.Diagonal},Динаміки:{item.Dinamics}."); }
         }
