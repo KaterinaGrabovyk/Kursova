@@ -14,8 +14,8 @@ namespace KursovaWinForms
 {
     public partial class Admin : Form
     {
-        DDBContext dbPC;
-        DDBContext2 dbLT;
+        DDBContext3 dbPC;
+        DDBContext4 dbLT;
         public Admin()
         {
             InitializeComponent();
@@ -36,8 +36,8 @@ namespace KursovaWinForms
             listView1.Columns.Add("Діагональ", 200, HorizontalAlignment.Center);
             listView1.Columns.Add("Динаміки", 200, HorizontalAlignment.Center);
 
-            dbPC = new DDBContext();
-            dbLT = new DDBContext2();
+            dbPC = new DDBContext3();
+            dbLT = new DDBContext4();
             dbPC.Database.EnsureCreated();
             dbLT.Database.EnsureCreated();
 

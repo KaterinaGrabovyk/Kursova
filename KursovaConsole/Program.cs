@@ -19,7 +19,7 @@ namespace KursovaConsole
         //Головне меню
         static void M()
         {
-            Console.WriteLine("Для виконання дії введіть відповідну цифру:\n1-додати,\n2-видалити,\n3-показати,\n4-редагувати.\nІнакша відповідь буде вважатися помилкою.");
+            Console.WriteLine("Для виконання дії введіть відповідну цифру:\n1-додати,\n2-видалити,\n3-показати,\n4-редагувати.\n5-вийти.\nІнакша відповідь буде вважатися помилкою.");
             string vidp1 = Console.ReadLine();
             switch (vidp1)
             {
@@ -30,6 +30,7 @@ namespace KursovaConsole
                     Show();
                     break;
                 case "4": Redact(); break;
+                case "5": Console.WriteLine("---/Закриття програми\\---"); break;
                 default:
                     Console.WriteLine("Нічого не обрано/Некоректний вибір. Повернення на головне меню - будь яка кнопка"); Console.ReadLine();
                     Console.Clear();
@@ -248,6 +249,7 @@ namespace KursovaConsole
             try
             {
                 Console.Clear();
+                Console.WriteLine("-------------------------|Додавання|-------------------------");
                 Console.Write("Виробник: ");
                 string Vir = Console.ReadLine();
                 Console.Write("об'єм RAM: ");
@@ -258,9 +260,9 @@ namespace KursovaConsole
                 int YadCount = int.Parse(Console.ReadLine());
                 Console.Write("Ціна: ");
                 double Price = double.Parse(Console.ReadLine());
-                Console.Write("Якщо в наявності, пишіть Т,якщо немає - тисніть будь яку кнопку: ");
+                Console.Write("Якщо в наявності, пишіть 1,якщо немає - тисніть будь яку кнопку: ");
                 bool isAwaible;
-                if (Console.ReadLine() == "T")
+                if (Console.ReadLine() == "1")
                 {
                     isAwaible = true;
                 }

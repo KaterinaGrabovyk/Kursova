@@ -12,10 +12,26 @@ namespace KursovaConsole.DB
         public DbSet<PC> PCs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=PCdata;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=PCdataConsole;Trusted_Connection=True;");
         }
     }
     public class DDBContext2 : DbContext
+    {
+        public DbSet<LapTop> LTs { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=LapTopdataConsole;Trusted_Connection=True;");
+        }
+    }
+    public class DDBContext3 : DbContext
+    {
+        public DbSet<PC> PCs { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=PCdata;Trusted_Connection=True;");
+        }
+    }
+    public class DDBContext4 : DbContext
     {
         public DbSet<LapTop> LTs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
