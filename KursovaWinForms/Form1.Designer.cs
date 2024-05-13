@@ -101,6 +101,7 @@
             Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(5, 4, 5, 4);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Вхід";
             ResumeLayout(false);
             PerformLayout();

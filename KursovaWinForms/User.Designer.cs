@@ -63,6 +63,7 @@
             // 
             // listBox1
             // 
+            listBox1.BackColor = Color.CadetBlue;
             listBox1.FormattingEnabled = true;
             listBox1.HorizontalScrollbar = true;
             listBox1.ItemHeight = 28;
@@ -77,14 +78,15 @@
             // 
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(226, -5);
+            tabControl1.Location = new Point(240, -5);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(687, 218);
+            tabControl1.Size = new Size(673, 218);
             tabControl1.TabIndex = 1;
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.Tan;
             tabPage2.Controls.Add(button5);
             tabPage2.Controls.Add(radioButton2);
             tabPage2.Controls.Add(radioButton1);
@@ -95,19 +97,21 @@
             tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(679, 177);
+            tabPage2.Size = new Size(665, 177);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "ПК";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            button5.Location = new Point(606, 128);
+            button5.BackColor = Color.ForestGreen;
+            button5.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            button5.ForeColor = SystemColors.ControlLightLight;
+            button5.Location = new Point(579, 118);
             button5.Name = "button5";
-            button5.Size = new Size(67, 43);
+            button5.Size = new Size(80, 56);
             button5.TabIndex = 29;
             button5.Text = "OK";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // radioButton2
@@ -151,35 +155,39 @@
             // 
             // button4
             // 
+            button4.BackColor = Color.SandyBrown;
+            button4.Font = new Font("Verdana", 13.8F, FontStyle.Bold);
             button4.Location = new Point(16, 104);
             button4.Name = "button4";
             button4.Size = new Size(313, 65);
             button4.TabIndex = 1;
             button4.Text = "Показати ПК, де є подарунок мишка";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.Peru;
+            button3.Font = new Font("Verdana", 13.8F, FontStyle.Bold);
             button3.Location = new Point(16, 16);
             button3.Name = "button3";
-            button3.Size = new Size(313, 52);
+            button3.Size = new Size(313, 73);
             button3.TabIndex = 0;
             button3.Text = "Впорядкувати за ціною";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // tabPage3
             // 
+            tabPage3.BackColor = Color.PaleTurquoise;
             tabPage3.Controls.Add(groupBox1);
             tabPage3.Controls.Add(button7);
             tabPage3.Controls.Add(button6);
             tabPage3.Location = new Point(4, 37);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(679, 177);
+            tabPage3.Size = new Size(665, 177);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Ноутбуки";
-            tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -206,7 +214,6 @@
             numericUpDown3.Size = new Size(122, 35);
             numericUpDown3.TabIndex = 32;
             numericUpDown3.Visible = false;
-            numericUpDown3.Visible = false;
             // 
             // label3
             // 
@@ -230,12 +237,15 @@
             // 
             // button8
             // 
-            button8.Location = new Point(398, 115);
+            button8.BackColor = Color.ForestGreen;
+            button8.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            button8.ForeColor = SystemColors.ControlLightLight;
+            button8.Location = new Point(386, 110);
             button8.Name = "button8";
-            button8.Size = new Size(67, 50);
+            button8.Size = new Size(71, 55);
             button8.TabIndex = 2;
             button8.Text = "ОК";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
             // comboBox1
@@ -283,48 +293,61 @@
             // 
             // button7
             // 
+            button7.BackColor = Color.MediumSeaGreen;
+            button7.Font = new Font("Verdana", 13.8F, FontStyle.Bold);
             button7.Location = new Point(9, 88);
             button7.Name = "button7";
             button7.Size = new Size(190, 58);
             button7.TabIndex = 1;
             button7.Text = "В наявності";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // button6
             // 
+            button6.BackColor = Color.MediumSpringGreen;
+            button6.Font = new Font("Verdana", 13.8F, FontStyle.Bold);
             button6.Location = new Point(9, 13);
+            button6.MaximumSize = new Size(190, 52);
+            button6.MinimumSize = new Size(190, 52);
             button6.Name = "button6";
             button6.Size = new Size(190, 52);
             button6.TabIndex = 0;
-            button6.Text = "Всі ноутбуки";
-            button6.UseVisualStyleBackColor = true;
+            button6.Text = "Всі ";
+            button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
             // button1
             // 
+            button1.BackColor = Color.DarkOrange;
+            button1.Font = new Font("Verdana", 13.8F, FontStyle.Bold);
+            button1.ForeColor = SystemColors.ControlLightLight;
             button1.Location = new Point(7, 0);
             button1.Name = "button1";
-            button1.Size = new Size(199, 105);
+            button1.Size = new Size(227, 105);
             button1.TabIndex = 0;
             button1.Text = "Показ усіх елементів";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.Firebrick;
+            button2.Font = new Font("Verdana", 13.8F, FontStyle.Bold);
+            button2.ForeColor = SystemColors.ControlLightLight;
             button2.Location = new Point(7, 106);
             button2.Name = "button2";
-            button2.Size = new Size(199, 107);
+            button2.Size = new Size(227, 107);
             button2.TabIndex = 1;
             button2.Text = "Зняти всі налаштування";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // User
             // 
             AutoScaleDimensions = new SizeF(14F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Desktop;
             ClientSize = new Size(918, 628);
             Controls.Add(button1);
             Controls.Add(button2);
@@ -332,7 +355,10 @@
             Controls.Add(listBox1);
             Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(5, 4, 5, 4);
+            MaximumSize = new Size(936, 675);
+            MinimumSize = new Size(936, 675);
             Name = "User";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "User";
             tabControl1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
